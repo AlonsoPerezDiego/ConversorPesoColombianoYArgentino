@@ -6,6 +6,7 @@
 package pesos;
 
 import static java.lang.String.valueOf;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -20,6 +21,11 @@ public class Ventana extends javax.swing.JFrame {
     public Ventana() {
         initComponents();
         this.setLocationRelativeTo(null);
+        try{
+            this.setIconImage(new ImageIcon(getClass().getResource("coins.png")).getImage());
+        }catch(Exception ex){
+            new Ventana();
+        }
     }
     
     /**
